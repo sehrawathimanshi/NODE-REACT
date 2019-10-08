@@ -3,9 +3,8 @@ import './Avatar.css'
 import 'tachyons';
 import AvatarList from './AvatarList';
 import { withRouter } from "react-router";
-
-const Avatar = () => {
-    const ListArray = [{
+export class Avatar extends React.Component {
+    ListArray = [{
         id: 1,
         name: 'himanshi',
         profile: 'Web Developer'
@@ -26,13 +25,18 @@ const Avatar = () => {
         name: 'Mayank',
         profile: 'angular Developer'
     }]
-
-    const avatarCards= ListArray.map((data, index) => {
-        return <AvatarList  key={ListArray[index].id} name={ListArray[index].name} work={ListArray[index].profile} />
+    avatarCards= this.ListArray.map((data, index) => {
+        return <AvatarList {...this.props}  key={this.ListArray[index].id} name={this.ListArray[index].name} work={this.ListArray[index].profile} />
     })
-    return (<div>
-    {avatarCards}
-       </div>)
+    render(){
+        console.log(this.props)
+        return (<div>
+            {this.avatarCards}
+               </div>)
+    }
+    
+
 }
+
 
 export default withRouter(Avatar);

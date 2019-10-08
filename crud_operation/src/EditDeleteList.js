@@ -1,9 +1,13 @@
 import React from 'react';
 
-const EditDeleteList = () => {
-    console.log('hiihihih')
-    return; 
+export class EditDeleteList extends React.Component {
+    render(){
+        console.log(this.props)
 
+        return  <h1>dfjdkjgdfkjgdfkljgdlfkjglfkjgkldfjgljgfjgkjhkdjghhj</h1>
+    }
 }
+
+
 
 export default EditDeleteList;

@@ -20,7 +20,7 @@ console.log(this)
       <Router  history ={customHistory} >
         <div>
         <Switch>
-        <Route path="/" component={Avatar} {...props} />
+        <Route path="/" exact component={Avatar}  />
         <Route path="/avatar/:id"  component={EditDeleteList} />
       </Switch>
 

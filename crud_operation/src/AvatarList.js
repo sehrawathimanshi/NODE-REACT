@@ -32,14 +32,13 @@ export class AvatarList extends React.Component {
         console.log(this.props)
         if (selectedCourseId) {
             console.log(selectedCourseId)
-            const { history } = this.context;
-   if(history) history.router.push(`/avatar/${selectedCourseId}`);
-            // this.setState({ selectedCourseId: undefined });
-            // this.props.history.push(`/avatar/${selectedCourseId}`);
+            this.props.history.push(`/avatar/${selectedCourseId}`);
         }
     }
 
     render() {
+        console.log(this.props)
+
         return (
             <div className="avatarStyle ma4 bg-light-purple dib pa4" onClick={this.handleEditCourse}  >
 
